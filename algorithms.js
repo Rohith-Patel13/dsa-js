@@ -119,4 +119,27 @@ function threeNestedLoops(n) {
  */
 
 
+/**
+ * Time Complexity:
+ * insert or remove property from an object - O(1),constant time
+ * access property from an object - O(1), constant time
+ * search for a value in an object - O(n), linear time
+ * Object.keys() - O(n), linear time
+ * Object.values() - O(n), linear time
+ * Object.entries() - O(n), linear time
+ */
+const person = {
+   name: 'John',
+   age: 30
+}
 
+/**
+ * Time Complexity:
+ * 
+ * insert or remove the property from end of an array - O(1), constant time
+ * If you insert or remove the property from the beginning of an array - O(n), linear time
+ * access property from an array - O(1), constant time
+ * search for a value in an array - O(n), linear time
+ * forEach/ map/ filter/ reduce - O(n), linear time
+ */
+const odd = [1, 3, 5, 7, 9]
