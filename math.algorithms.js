@@ -62,8 +62,19 @@ console.log(factorialOfANumber(factorialNumber));
 
 
 
-// A prime number (or a prime) is a natural number greater than 1 that is not a Prime numbers are natural numbers that are divisible by only 1 and the number itself.
-// 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199 
+/**
+ * @function isPrimeOrNot
+ * 
+ * A prime number (or a prime) is a natural number greater than 1 that is not a Prime numbers are natural numbers that are divisible by only 1 and the number itself.
+ * The first few prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131,
+ * 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199 
+ * 
+ * Time Complexity: O(n)
+ * 
+ * @description Check whether a given number is a prime number or not
+ * @param {number} n - The number to check
+ * @returns {boolean} true if the number is prime, false otherwise
+ */
 const isPrimeOrNot = (n) => {
     if(n<2){
         return false
@@ -80,3 +91,31 @@ const isPrimeOrNot = (n) => {
 }
 
 console.log(isPrimeOrNot(5))
+
+
+
+/*
+Pseudocode:
+n=8
+8/2 = 4 (remainder 0)
+4/2 = 2 (remainder 0)
+2/2 = 1 (remainder 0)
+If remainder is not 0 in any step, `n` is not a power of two
+If remainder is 0 and `n` comes down to 1 eventually, n is power of two. 
+*/
+const isPowerOfTwo = (n) => {
+    if(n<1) {
+        return false
+    }
+    
+    while(n>1){
+        if(n%2!==0){
+            return false
+        }
+        n = n/2
+        console.log(n)
+    }
+    return true
+}
+
+console.log(isPowerOfTwo(8))
