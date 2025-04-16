@@ -93,29 +93,64 @@ const isPrimeOrNot = (n) => {
 console.log(isPrimeOrNot(5))
 
 
+/**
+ * @function isPowerOfTwo
+ * 
+    Pseudocode:
+    n=8
+    8/2 = 4 (remainder 0)
+    4/2 = 2 (remainder 0)
+    2/2 = 1 (remainder 0)
+    If remainder is not 0 in any step, `n` is not a power of two
+    If remainder is 0 and `n` comes down to 1 eventually, n is power of two.
+ * 
+ * Time Complexity: O(logn) - Logarithmic
+ * 
+ * @description Check whether a given number is a power of two
+ * @param {number} n - The number to check
+ * @returns {boolean} true if the number is a power of two, false otherwise
+ */
 
-/*
-Pseudocode:
-n=8
-8/2 = 4 (remainder 0)
-4/2 = 2 (remainder 0)
-2/2 = 1 (remainder 0)
-If remainder is not 0 in any step, `n` is not a power of two
-If remainder is 0 and `n` comes down to 1 eventually, n is power of two. 
-*/
 const isPowerOfTwo = (n) => {
     if(n<1) {
-        return false
+        return false // executes `1` time
     }
     
     while(n>1){
-        if(n%2!==0){
+        if(n%2!==0){ // returns remainder
             return false
         }
-        n = n/2
-        console.log(n)
+        
+        // returns quotient
+        n = n/2 // 
     }
-    return true
+    return true // executes `1` time
 }
 
-console.log(isPowerOfTwo(8))
+console.log(isPowerOfTwo(2))
+
+
+
+/**
+ * Recursion
+ * 1. Recursion is when a function calls itself
+ * 2. Every recursive solution needs to have a base case - a condition that terminate the recursion.
+ * 3. If you find yourself breaking down your problem in to smaller versions of the same problem,
+ *    then recursion is very usefull.
+ */
+
+
+// Problem: Give a number `n`, find the `nth` element of the Fibonacci sequence
+// Fibonacci sequence:- 0,1,1,2,3,5,8
+const nThElementOfFibonacciSequence = (n) => {
+    if(n<0) {
+        return undefined;
+    }
+    
+    const firstTwoFibonacciSequence = [0,1]
+    for(let i=2; i<n; i++) {
+        
+    }
+}
+
+console.log(nThElementOfFibonacciSequence(5))
